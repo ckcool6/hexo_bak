@@ -1,0 +1,31 @@
+## must
+theme: cactus
+
+#archive_generator:
+#  per_page: 0
+#
+#index_generator:
+#  per_page: 5
+
+deploy:
+  type: git
+  repo: git@github.com:ckcool6/ckcool6.github.io.git
+  branch: main
+  message: update
+
+## 可选
+title: luzhiyuan的博客
+subtitle: 个人博客
+description: <span>不写博客，别人就不知道你在搞技术！</span>
+author: lu zhiyuan
+language: zh-CN
+timezone: Asia/Shanghai
+
+#RSS订阅
+#plugin:
+#  - hexo-generator-feed
+##Feed Atom
+#feed:
+#  type: atom
+#  path: atom.xml
+#  limit: 20
