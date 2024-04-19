@@ -99,7 +99,7 @@ int **create_array(size_t dim1, size_t dim2) {
         return NULL;
 
     for (size_t i = 1; i < dim1; i++)
-        p[i] = p[i - 1] + dim2; //
+        p[i] = p[i - 1] + dim2; 
 
     return p;
 }
@@ -144,7 +144,7 @@ int **create_array(size_t dim1, size_t dim2) {
         return NULL;
 
     for (size_t i = 1; i < dim1; i++)
-        p[i] = p[i - 1] + dim2; // Loc（A[i]）=Loc(A[1])+(i-1)*len;
+        p[i] = p[i - 1] + dim2; 
 
     return p;
 }
@@ -164,7 +164,7 @@ void delete_array(int **m) {
 0000010618531480 -> 2
 0000010618531484 -> 3
 ```
-当然，这种方法得知道数组地址的计算公式：`Loc（A[i]）=Loc(A[1])+(i-1)*len`;
+这样就连续了。
 
 ## 创建多维数组
 
@@ -177,7 +177,7 @@ float ***create_multi_array(int dim1, int dim2, int dim3) {
                                       dim1 * dim2 * dim3 * sizeof(float));
 
     for (size_t i = 0; i < dim1; ++i) {
-        ptr[i] = (float **) (ptr + dim1) + i * dim2; //
+        ptr[i] = (float **) (ptr + dim1) + i * dim2; 
         for (size_t j = 0; j < dim2; ++j)
             ptr[i][j] = (float *) (ptr + dim1 + dim1 * dim2) + i * dim2 * dim3 + j * dim3;
     }
